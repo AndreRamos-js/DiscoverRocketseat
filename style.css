@@ -4,13 +4,31 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --text-color: #fff;
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.5);
+    --surface-color-hover: rgba(0, 0, 0, 0.2);
+    --highlight-color: rgba(225, 225, 225, 0.2);
+}
+
+.light {
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --text-color: #000;
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(255, 255, 255, 0.5);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+}
+
 body * {
     font-family: 'Inter', sans-serif;
-    color: #fff;
+    color: var(--text-color);
 }
 
 body {
-    background-image: url(./assets/bg-mobile.jpg);
+    background: var(--bg-url);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -32,7 +50,7 @@ body {
 #profile img {
     width: 112px;
     border-radius: 60px;
-
+    border: 1px solid var(--text-color);
 }
 
 #profile p {
@@ -58,8 +76,8 @@ ul li a {
     padding: 16px 24px;
 
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.50);
-    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid var(--stroke-color);
+    background: var(--surface-color);
     backdrop-filter: blur(4px);
 
     text-decoration: none;
@@ -73,8 +91,8 @@ ul li a {
 }
 
 ul li a:hover {
-    border: 1.5px solid white;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
 }
 
 /* SOCIAL LINKS */
@@ -96,7 +114,7 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--highlight-color);
 }
 
 footer {
