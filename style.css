@@ -98,3 +98,17 @@ ul li a:hover {
 #social-links a:hover {
     background: rgba(255, 255, 255, 0.2);
 }
+
+footer {
+    padding: 24px 0;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+}
+
+footer ion-icon {
+    font-size: 20px;
+    margin-left: 2px;
+}
