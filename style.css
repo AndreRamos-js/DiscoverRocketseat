@@ -17,9 +17,12 @@ body {
 }
 
 #container {
-    margin: 56px auto 0;
     width: 360px;
+    margin: 56px auto 0;
+    padding: 0 24px;
 }
+
+/* PROFILE */
 
 #profile {
     text-align: center;
@@ -36,4 +39,39 @@ body {
     margin-top: 8px;
     font-weight: 500;
     line-height: 24px;
+}
+
+/* LINKS */
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.50);
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(4px);
+
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: background .3s;
+}
+
+#profile a {
+    text-decoration: none;
+}
+
+ul li a:hover {
+    border: 1.5px solid white;
+    background: rgba(255, 255, 255, 0.05);
 }
