@@ -30,6 +30,7 @@ body * {
 }
 
 body {
+    height: 100vh;
     background: var(--bg-url);
     background-repeat: no-repeat;
     background-position: top center;
@@ -37,7 +38,8 @@ body {
 }
 
 #container {
-    width: 360px;
+    width: 100%;
+    max-width: 588px;
     margin: 56px auto 0;
     padding: 0 24px;
 }
@@ -167,4 +169,14 @@ footer {
 footer ion-icon {
     font-size: 20px;
     margin-left: 2px;
+}
+
+@media (min-width: 700px) {
+    :root {
+        --bg-url: url(./assets/bg-desktop.jpg);
+    }
+
+    .light {
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
 }
